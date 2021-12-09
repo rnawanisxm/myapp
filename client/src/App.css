@@ -86,18 +86,14 @@ h4{
 }
 
 
-.box {
-  box-shadow: 0px 4px 8px rgba(0,0,0,0.14);
-}
-
 .box_content {
   margin-top: auto;
   margin-bottom: auto;
   padding: 5px 10px;
   min-width: 0;
   -webkit-box-flex: 0;
-  flex: 0 0 75%;
-  max-width: 75%;
+ 
+  
 }
 
 .desc{
@@ -108,7 +104,7 @@ h4{
   display: flex;
   justify-content: center;
   align-items: center;
-  width:80%;
+  width:50%;
   margin: auto;
   
 }
@@ -122,10 +118,10 @@ h4{
 
 .location {
   text-align: center;
-  font-weight: 800;
+  font-weight: 600;
   background-color: #B0CFDE;
+  padding-bottom: 5%;
 }
-
 .date{
   text-align: center;
   margin-top: 5%;
@@ -136,13 +132,16 @@ h4{
 
 .temp {
   text-align: center;
-  font-size: 35px;
+  font-size: 55px;
+  margin:auto;
   padding-bottom: 10%;
+  padding-top: 10%;
 }
 
 .country{
   font-size:20px;
   font-weight:400;
+  padding-top:1%;
 }
 
 img {

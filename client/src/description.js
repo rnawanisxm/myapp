@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import pic1 from './malaga.jpg';
 
 const Description = (props) => {
 

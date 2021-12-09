@@ -19,12 +19,6 @@ const Weather = (props) => {
         return (k - 273.15).toFixed(2);
     };
 
-    const unixToDate = (k, l) => {
-        const date = new Date((l - k) * 1000);
-        const month = (date.toLocaleDateString("en-US", { month: "short" }))
-
-        return (date.toLocaleTimeString("en-US"));
-    }
 
     const icon = 'http://openweathermap.org/img/w/${apiData.weather[0].icon}.png'
 
@@ -37,7 +31,8 @@ const Weather = (props) => {
     return (
         <>
 
-            {apiData.main ? (<div className="container-weather">
+            {apiData.main ? (
+            <div className="container-weather">
                 <h2 className="location">
                     {props.loc}
                     <div className="country">
@@ -52,13 +47,13 @@ const Weather = (props) => {
                     <div className="weather_image">
                         
                             <img
-                                src={`http://openweathermap.org/img/w/${apiData.weather[0].icon}.png`} class="w_image"
+                                src={`http://openweathermap.org/img/w/${apiData.weather[0].icon}.png`} className="w_image"
                                 alt="weather status icon"
 
                             />
                     </div>
                     <div className="caption">{apiData.weather[0].main}</div>
-                    <h1 className="temp">{kelvinToFarenheit(apiData.main.temp)}&deg; C</h1>
+                    <h1 className="temp">{kelvinToFarenheit(apiData.main.temp)}&deg;C</h1>
                 </div>
 
 
@@ -66,6 +61,8 @@ const Weather = (props) => {
             ) : (
                 <p> Loading</p>
             )}
+
+
 
 
         </>

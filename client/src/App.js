@@ -16,12 +16,12 @@ const App = () => {
 
   //Built for scalability and easily readable! Just add any component under the return statement where loc is our props being handled.
   return (
-    <>
+    <div className= "website">
       <div className="citie">
         {/* Setting state of loc using buttons. */}
-        {C.map((loc) => {
+        {C.map((loc, i) => {
           return (
-            <button onClick={() => handleClick(loc)} className="b1">
+            <button onClick={() => handleClick(loc)} key = {i} className="b1">
               <h2>{loc}</h2>
             </button>
           )
@@ -39,7 +39,7 @@ const App = () => {
       <Weather loc={loc} />
 
 
-      </>
+      </div>
   )
 }
 
