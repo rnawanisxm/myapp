@@ -2,6 +2,7 @@ import React, { useCallback, useEffect, useState } from "react";
 import "./App.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Description from './description.js';
+import Weather from './weather.js';
 const App = () => {
   const [loc, setLoc] = useState([]);
   //Edit any 5 cities here which are automatically created into a button. 
@@ -32,6 +33,11 @@ const App = () => {
       {/*This component queries the backend server 
           for information from handleClick*/}
       <Description loc={loc} />
+
+      {/*This component queries OpenWeatherMap API 
+          for weather from handleClick*/}
+      <Weather loc={loc} />
+
 
       </>
   )
