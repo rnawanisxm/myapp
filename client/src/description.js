@@ -6,47 +6,15 @@ const Description = (props) => {
     //const [desc, setDesc] = useState([])
     const [data1, setData] = useState([]);
     useEffect(() => {
-        if (props.loc == "Philipsburg") {
-            fetch('/api/hello')
+        
+
+        if(props.loc){
+            fetch(`/api/${props.loc}`)
                 .then((res) => res.json())
-                .then((data1) => setData(data1.Philipsburg))
+                .then((data1) => setData(data1));
         }
-
-        else if (props.loc == "Malaga") {
-            fetch('/api/hello')
-                .then((res) => res.json())
-                .then((data1) => setData(data1.Malaga))
-        }
-
-        else if (props.loc == "Reykjavik") {
-            fetch('/api/hello')
-                .then((res) => res.json())
-                .then((data1) => setData(data1.Reykjavik))
-
-        }
-
-        else if (props.loc == "Edmonton") {
-            fetch('/api/hello')
-                .then((res) => res.json())
-                .then((data1) => setData(data1.Edmonton))
-
-        }
-
-        else if (props.loc == "Vancouver") {
-            fetch('/api/hello')
-                .then((res) => res.json())
-                .then((data1) => setData(data1.Vancouver))
-
-        }
-
-        else {
-            fetch('/api/hello')
-                .then((res) => res.json())
-                .then((data1) => setData(data1.default))
-
-        }
-
-
+        
+        
     }, [props]);
 
 
@@ -60,7 +28,7 @@ const Description = (props) => {
                     <div className="box">
                         <div className="box_content">
                             <h1>{data1.label}</h1>
-                            <p>{data1.desc}</p>
+                            <div className = "desc">{data1.desc}</div>
                         </div>
                     </div>
 

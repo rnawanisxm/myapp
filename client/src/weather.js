@@ -37,10 +37,10 @@ const Weather = (props) => {
     return (
         <>
 
-            {apiData.main ? (<div class="container-weather">
-                <h2 class="location">
+            {apiData.main ? (<div className="container-weather">
+                <h2 className="location">
                     {props.loc}
-                    <div class="country">
+                    <div className="country">
 
                         {countries.getName(apiData.sys.country, 'en', {
                             select: 'official',
@@ -48,18 +48,19 @@ const Weather = (props) => {
 
                     </div>
                 </h2>
-                <div class="weather_image">
-                    <figure>
-                    <img
-                        src={`http://openweathermap.org/img/w/${apiData.weather[0].icon}.png`} class="w_image"
-                        alt="weather status icon"
+                <div className="container-bottom">
+                    <div className="weather_image">
                         
-                    />
-                    <figurecaption class = "caption">Hi</figurecaption>
-                    </figure>
-                    <h1 class="temp">{kelvinToFarenheit(apiData.main.temp)}&deg; C</h1>
+                            <img
+                                src={`http://openweathermap.org/img/w/${apiData.weather[0].icon}.png`} class="w_image"
+                                alt="weather status icon"
+
+                            />
+                    </div>
+                    <div className="caption">{apiData.weather[0].main}</div>
+                    <h1 className="temp">{kelvinToFarenheit(apiData.main.temp)}&deg; C</h1>
                 </div>
-                
+
 
             </div>
             ) : (

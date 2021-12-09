@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Description from './description.js';
 import Weather from './weather.js';
 const App = () => {
-  const [loc, setLoc] = useState([]);
+  const [loc, setLoc] = useState(["default"]);
   //Edit any 5 cities here which are automatically created into a button. 
   const C = ["Philipsburg", "Malaga", "Reykjavik", "Edmonton", "Vancouver"];
 

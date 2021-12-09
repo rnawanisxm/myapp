@@ -6,38 +6,47 @@ const port = process.env.PORT || 5000;
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 // API calls
-app.get("/api/hello", (req, res) => {
+app.get("/api/Philipsburg", (req, res) => {
   res.json({
-    "Philipsburg":{
-      "label": "Friendly Island",
-      "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "label": "Philipsburg",
+      "desc": "Philipsburg is the main town and capital of the country of Sint Maarten. The town is on a narrow stretch of land between Great Bay and the Great Salt Pond. It functions as the commercial center of Saint Martin island, whereof Sint Maarten encompasses the southern half. As of 2017, it has 1,894 inhabitants.",
       "jpg": "sxm.jpg"
-    },
-    "Malaga":{
+  });
+});
+app.get("/api/Malaga", (req, res) => {
+  res.json({
       "label": "Malaga",
-      "desc": "Spanish Island",
+      "desc": "Málaga is a municipality of Spain, capital of the Province of Málaga, in the autonomous community of Andalusia. With a population of 578,460 in 2020, it is the second-most populous city in Andalusia after Seville and the sixth most populous in Spain. It lies on the Costa del Sol (Coast of the Sun) of the Mediterranean, about 100 kilometres (62.14 miles) east of the Strait of Gibraltar and about 130 km (80.78 mi) north of Africa.",
       "jpg": "malaga.jpg"
-    },
-    "Reykjavik":{
+  });
+});
+app.get("/api/Reykjavik", (req, res) => {
+  res.json({
       "label": "Reykjavik",
-      "desc": "Spanish Island",
+      "desc": "Reykjavik s the capital and largest city of Iceland. It is located in southwestern Iceland, on the southern shore of Faxaflói bay. Its latitude is 64°08' N, making it the world's northernmost capital of a sovereign state. With a population of around 131,136 (and 233,034 in the Capital Region), it is the centre of Iceland's cultural, economic and governmental activity, and is a popular tourist destination.",
       "jpg": "rey.jpg"
-    },
-    "Edmonton":{
+      });
+  });
+  app.get("/api/Edmonton", (req, res) => {
+    res.json({
       "label": "Edmonton",
-      "desc": "Spanish Island",
+      "desc": "Edmonton is the capital city of the Canadian province of Alberta. Edmonton is on the North Saskatchewan River and is the centre of the Edmonton Metropolitan Region, which is surrounded by Alberta's central region. The city anchors the north end of what Statistics Canada defines as the Calgary–Edmonton Corridor.",
       "jpg": "edm.jpg"
-    },
-    "Vancouver":{
+    });
+  });
+  app.get("/api/Vancouver", (req, res) => {
+    res.json({
       "label": "Vancouver",
-      "desc": "Spanish Island",
+      "desc": "Vancouver is a major city in western Canada, located in the Lower Mainland region of British Columbia. Vancouver is one of the most ethnically and linguistically diverse cities in Canada: 52 percent of its residents are not native English speakers, 48.9 percent are native speakers of neither English nor French, and 50.6 percent of residents belong to visible minority groups.",
       "jpg": "yvr.jpg"
-    },
-    "default":{
+     });
+  });
+  app.get("/api/default", (req, res) => {
+    res.json({
       "label": "Pick A City",
       "desc": "Description",
       "jpg": "malaga.jpg"
-    }
+  
   });
 });
 

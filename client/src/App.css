@@ -100,18 +100,25 @@ h4{
   max-width: 75%;
 }
 
+.desc{
+  width: fit-content;
+}
+
 .weather_image{
-  
-  height: 55%;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 30px;
+  width:80%;
+  margin: auto;
+  
 }
 
-.w_image{
-  display:block;
+.caption{
+  font-size: 18px;
+  text-align: center;
 }
+
+
 
 .location {
   text-align: center;
@@ -128,10 +135,14 @@ h4{
 }
 
 .temp {
-  margin-top: 20%;
   text-align: center;
-  
   font-size: 35px;
+  padding-bottom: 10%;
+}
+
+.country{
+  font-size:20px;
+  font-weight:400;
 }
 
 img {
